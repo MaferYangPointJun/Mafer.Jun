@@ -1,0 +1,15 @@
+﻿@model Mafer.Jun.Models.BlogModel
+@{
+    ViewBag.Title = "Index";
+}
+<div class="TextContext">
+    <div class="WordContext">
+        @Html.Hidden(Model.ArticleId.ToString(), Model.ArticleId.ToString())
+        @for (int i = 0; i < Model.BlogContext.Count - 1; i++)
+        {
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;@Model.BlogContext[i]</p>
+        }
+    </div>
+</div>
+
+@Styles.Render("~/Content/MaferStyle.css")
